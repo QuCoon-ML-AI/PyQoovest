@@ -40,7 +40,7 @@ def factor_crop_rec(factor, factor_value, factor_normal, crop_name):
     exception_status = "NO"
     try:
         response = client.chat.completions.create(
-            temperature=0.1,
+            temperature=0.5,
             # engine=deployment_name,
             model="gpt-3.5-turbo",
             messages = [
@@ -75,7 +75,7 @@ def factor_fert_rec(N,P,K,N_level,P_level,K_level,N_normal,P_normal,K_normal,cro
     exception_status = "NO"
     try:
         completion = client.chat.completions.create(
-            temperature=0.3,
+            temperature=0.5,
             # engine=deployment_name,
             # model="gpt-3.5-turbo",
             model="gpt-4o",
@@ -104,7 +104,7 @@ def factor_disease_rec(crop_name,disease_name):
     exception_status = "NO"
     try:
         completion = client.chat.completions.create(
-            temperature=0.1,
+            temperature=0.5,
             # engine=deployment_name,
             # model="gpt-3.5-turbo",
             model="gpt-4o",
