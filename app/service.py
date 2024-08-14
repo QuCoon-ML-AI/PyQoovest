@@ -226,9 +226,9 @@ def predict_fertilizer_service(cropname,nitrogen,phosphorous,potassium):
             return float(value)
         return value
 
-    N_scale = calc_scale(nitrogen,N_normal,0.05)
-    P_scale = calc_scale(phosphorous,P_normal,0.05)
-    K_scale = calc_scale(potassium,K_normal,0.05)
+    N_scale = calc_scale(nitrogen,N_normal,0.002)
+    P_scale = calc_scale(phosphorous,P_normal,0.002)
+    K_scale = calc_scale(potassium,K_normal,0.002)
     # Create the response dictionary
     data = {
         'crop': crop_name,
